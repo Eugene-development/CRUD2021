@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Traits;
 
 //TODO первая нестыковка
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Http\Resources\Resource;
 
 trait Read
 {
@@ -14,7 +13,6 @@ trait Read
         $container = app();
         $response = $container->make($this->entity)->getOne($param);
         return new JsonResource($response);
-//        return new Resource($response);
     }
 
 
@@ -22,7 +20,6 @@ trait Read
     {
         $container = app();
         $response = $container->make($this->entity)->getAll();
-//        return new Resource($response);
         return new JsonResource($response);
     }
 
@@ -31,7 +28,7 @@ trait Read
     {
         $container = app();
         $response = $container->make($this->entity)->getSearch($search);
-        return new Resource($response);
+        return new JsonResource($response);
     }
 
 
@@ -39,7 +36,7 @@ trait Read
     {
         $container = app();
         $response = $container->make($this->entity)->getWh($param);
-        return new Resource($response);
+        return new JsonResource($response);
     }
 
 

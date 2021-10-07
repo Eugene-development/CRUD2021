@@ -28,7 +28,6 @@ abstract class Repository
     }
 
 
-
     public function getOne($param)
     {
         return $this->serviceOne->getOne($param);
@@ -53,6 +52,12 @@ abstract class Repository
     }
 
 
+    public function getHead($param)
+    {
+        return $this->serviceORM->getHead($param);
+    }
+
+
     public function create($data)
     {
         return $this->serviceCreate->create($data);
@@ -69,11 +74,5 @@ abstract class Repository
     {
         return $this->serviceDelete->delete($id);
     }
-
-    public function getHead($param)
-    {
-        return $this->serviceORM->getHead($param);
-    }
-
 
 }

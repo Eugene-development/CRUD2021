@@ -15,5 +15,4 @@ class HeadController extends Controller
     {
         $this->entity = Head::class;
     }
-
 }
