@@ -21,9 +21,4 @@ class Menu extends Model
     {
         return $this->morphOne(Text::class, 'tagable');
     }
-
-    public function seo()
-    {
-        return $this->morphOne(Seo::class, 'tagable');
-    }
 }
