@@ -27,3 +27,20 @@ Route::get('/get-one-seo/{id}', [SeoController::class, 'getOne']);
 Route::get('/get-one-text/{id}', [TextController::class, 'getOne']);
 
 
+/*
+|--------------------------------------------------------------------------
+| getAll
+|--------------------------------------------------------------------------
+|
+| Получить все значения
+|
+*/
+Route::get('/get-all-menu/', [MenuController::class, 'getAll']);
+Route::get('/get-all-head/', [HeadController::class, 'getAll']);
+Route::get('/get-all-rubric/', [RubricController::class, 'getAll']);
+Route::get('/get-all-category/', [CategoryController::class, 'getAll']);
+Route::get('/get-all-product/', [ProductController::class, 'getAll']);
+Route::get('/get-all-seo/', [SeoController::class, 'getAll']);
+Route::get('/get-all-text/', [TextController::class, 'getAll']);
+
+

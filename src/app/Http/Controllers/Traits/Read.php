@@ -22,7 +22,7 @@ trait Read
     {
         $container = app();
         $response = $container->make($this->entity)->getAll();
-        return new Resource($response);
+        return new JsonResource($response);
     }
 
 

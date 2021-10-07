@@ -8,6 +8,6 @@ abstract class GetAll
 {
     public function getAll()
     {
-        return $this->model::where('project_id', $this->token)->all();
+        return $this->model::where('project_id', $this->token)->get();
     }
 }
