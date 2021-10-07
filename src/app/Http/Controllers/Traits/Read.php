@@ -22,6 +22,7 @@ trait Read
     {
         $container = app();
         $response = $container->make($this->entity)->getAll();
+//        return new Resource($response);
         return new JsonResource($response);
     }
 
@@ -40,5 +41,14 @@ trait Read
         $response = $container->make($this->entity)->getWh($param);
         return new Resource($response);
     }
+
+
+    public function getHead($param)
+    {
+        $container = app();
+        $response = $container->make($this->entity)->getHead($param);
+        return new JsonResource($response);
+    }
+
 
 }

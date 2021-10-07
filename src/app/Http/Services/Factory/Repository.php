@@ -70,4 +70,10 @@ abstract class Repository
         return $this->serviceDelete->delete($id);
     }
 
+    public function getHead($param)
+    {
+        return $this->serviceORM->getHead($param);
+    }
+
+
 }
