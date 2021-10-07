@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 | getOne
 |--------------------------------------------------------------------------
 |
-| Получить одно по параметру
+| Получить одно значение по параметру
 |
 */
 Route::get('/get-one-menu/{id}', [MenuController::class, 'getOne']);
@@ -25,3 +25,5 @@ Route::get('/get-one-category/{id}', [CategoryController::class, 'getOne']);
 Route::get('/get-one-product/{id}', [ProductController::class, 'getOne']);
 Route::get('/get-one-seo/{id}', [SeoController::class, 'getOne']);
 Route::get('/get-one-text/{id}', [TextController::class, 'getOne']);
+
+
