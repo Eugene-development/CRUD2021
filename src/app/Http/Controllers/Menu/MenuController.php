@@ -18,6 +18,7 @@ class MenuController extends Controller
         $this->entity = Menu::class;
         $this->param = $request->id;
 
+
         $this->data = [
             'name' => $request->name,
             'slug' => Str::slug($request->name),
