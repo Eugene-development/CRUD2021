@@ -17,10 +17,10 @@ abstract class Repository
 
     public function __construct()
     {
-        $this->serviceORM = app('App\Http\Services\\' . $this->path . '\ServiceORM');
-        $this->serviceOne = app('App\Http\Services\\' . $this->path . '\ServiceOne');
-        $this->serviceAll = app('App\Http\Services\\' . $this->path . '\ServiceAll');
-        $this->serviceWhere = app('App\Http\Services\\' . $this->path . '\ServiceWhere');
+        $this->serviceORM    = app('App\Http\Services\\' . $this->path . '\ServiceORM');
+        $this->serviceOne    = app('App\Http\Services\\' . $this->path . '\ServiceOne');
+        $this->serviceAll    = app('App\Http\Services\\' . $this->path . '\ServiceAll');
+        $this->serviceWhere  = app('App\Http\Services\\' . $this->path . '\ServiceWhere');
         $this->serviceSearch = app('App\Http\Services\\' . $this->path . '\ServiceSearch');
         $this->serviceCreate = app('App\Http\Services\\' . $this->path . '\ServiceCreate');
         $this->serviceUpdate = app('App\Http\Services\\' . $this->path . '\ServiceUpdate');
@@ -32,15 +32,18 @@ abstract class Repository
         return $this->serviceOne->getOne($param);
     }
 
+
     public function getAll()
     {
         return $this->serviceAll->getAll();
     }
 
+
     public function getWhere($param)
     {
         return $this->serviceWhere->getWhere($param);
     }
+
 
     public function getSearch($param)
     {
@@ -53,10 +56,12 @@ abstract class Repository
         return $this->serviceCreate->create($data);
     }
 
+
     public function update($id, $data)
     {
         return $this->serviceUpdate->update($id, $data);
     }
+
 
     public function delete($id)
     {
