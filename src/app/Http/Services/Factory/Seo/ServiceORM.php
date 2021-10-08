@@ -4,10 +4,10 @@
 namespace App\Http\Services\Factory\Seo;
 
 
-use App\Http\Services\Library\GetMenu;
+use App\Http\Services\Library\GetProduct;
 use App\Http\Services\Warehouse\Seo;
 
-class ServiceORM extends GetMenu
+class ServiceORM extends GetProduct
 {
     use Seo;
 }

@@ -4,10 +4,10 @@
 namespace App\Http\Services\Factory\Text;
 
 
-use App\Http\Services\Library\GetMenu;
+use App\Http\Services\Library\GetProduct;
 use App\Http\Services\Warehouse\Text;
 
-class ServiceORM extends GetMenu
+class ServiceORM extends GetProduct
 {
     use Text;
 }
