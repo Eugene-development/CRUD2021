@@ -52,9 +52,45 @@ abstract class Repository
     }
 
 
+    public function getMenu($param)
+    {
+        return $this->serviceORM->getMenu($param);
+    }
+
+
     public function getHead($param)
     {
         return $this->serviceORM->getHead($param);
+    }
+
+
+    public function getRubric($param)
+    {
+        return $this->serviceORM->getRubric($param);
+    }
+
+
+    public function getCategory($param)
+    {
+        return $this->serviceORM->getCategory($param);
+    }
+
+
+    public function getSeo($param)
+    {
+        return $this->serviceORM->getSeo($param);
+    }
+
+
+    public function getText($param)
+    {
+        return $this->serviceORM->getText($param);
+    }
+
+
+    public function getProduct($param)
+    {
+        return $this->serviceORM->getProduct($param);
     }
 
 

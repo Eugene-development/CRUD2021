@@ -4,7 +4,7 @@
 namespace App\Http\Services\Library;
 
 
-class GetHead
+abstract class GetHead
 {
     public function getHead()
     {

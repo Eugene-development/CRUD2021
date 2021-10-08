@@ -4,7 +4,7 @@
 namespace App\Http\Services\Library;
 
 
-abstract class GetMenu
+abstract class GetRubric
 {
 
 }

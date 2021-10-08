@@ -6,6 +6,9 @@ namespace App\Http\Controllers\Traits;
 
 trait Update
 {
+    /**
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
     public function update()
     {
         $container = app();
