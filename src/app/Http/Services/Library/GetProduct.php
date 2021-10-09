@@ -11,9 +11,15 @@ abstract class GetProduct
         return $this->model::where('project_id', $this->token)
             ->where('id', $param)
             ->with([
+                'image' => function($query) {
+                    $query->where('project_id', $this->token);
+                },
+                'text' => function($query) {
+                    $query->where('project_id', $this->token);
+                },
                 'size' . "." . 'price' => function($query) {
                     $query->where('project_id', $this->token);
-                }
+                },
             ])
             ->get();
     }

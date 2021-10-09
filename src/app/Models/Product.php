@@ -28,7 +28,6 @@ class Product extends Model
         return $this->hasMany(Size::class);
     }
 
-
     public function image()
     {
         return $this->morphMany(Image::class, 'tagable');
