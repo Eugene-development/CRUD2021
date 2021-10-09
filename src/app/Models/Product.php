@@ -23,6 +23,12 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function size()
+    {
+        return $this->hasMany(Size::class);
+    }
+
+
     public function image()
     {
         return $this->morphMany(Image::class, 'tagable');

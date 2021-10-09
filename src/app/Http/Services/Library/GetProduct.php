@@ -10,9 +10,11 @@ abstract class GetProduct
     {
         return $this->model::where('project_id', $this->token)
             ->where('id', $param)
-            ->with(['text' => function($query) {
-                $query->where('project_id', $this->token);
-            }])
+            ->with([
+                'size' . "." . 'price' => function($query) {
+                    $query->where('project_id', $this->token);
+                }
+            ])
             ->get();
     }
 
