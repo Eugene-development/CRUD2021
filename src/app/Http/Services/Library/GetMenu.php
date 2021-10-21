@@ -10,9 +10,9 @@ abstract class GetMenu
     {
         return $this->model::where('project_id', $this->token)
             ->where('id', $param)
-//            ->with(['head' => function($query) {
-//                $query->where('project_id', $this->token);
-//            }])
+            ->with(['head' . "." . 'rubric' => function($query) {
+                $query->where('project_id', $this->token);
+            }])
             ->get();
     }
 

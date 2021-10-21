@@ -11,6 +11,9 @@ abstract class GetProduct
         return $this->model::where('project_id', $this->token)
             ->where('id', $param)
             ->with([
+                'category' => function($query) {
+                    $query->where('project_id', $this->token);
+                },
                 'image' => function($query) {
                     $query->where('project_id', $this->token);
                 },

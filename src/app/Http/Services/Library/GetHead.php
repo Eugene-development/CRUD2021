@@ -10,7 +10,11 @@ abstract class GetHead
     {
         return $this->model::where('project_id', $this->token)
             ->where('id', $param)
-            ->with(['rubric' => function($query) {
+            ->with([
+                'text' => function($query) {
+                    $query->where('project_id', $this->token);
+                },
+                'rubric' => function($query) {
                 $query->where('project_id', $this->token);
             }])
             ->get();
