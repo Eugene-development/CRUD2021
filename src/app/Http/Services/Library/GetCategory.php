@@ -17,6 +17,9 @@ abstract class GetCategory
                 'product' => function($query) {
                     $query->where('project_id', $this->token);
                 },
+                'product' . "." . 'size'. "." . 'price' => function($query) {
+                    $query->where('project_id', $this->token);
+                },
                 'product' . "." . 'text' => function($query) {
                     $query->where('project_id', $this->token);
                 },
