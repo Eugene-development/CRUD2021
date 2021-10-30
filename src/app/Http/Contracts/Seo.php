@@ -4,7 +4,4 @@
 namespace App\Http\Contracts;
 
 
-interface Seo
-{
-
-}
+interface Seo{}

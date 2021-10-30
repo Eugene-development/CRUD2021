@@ -12,18 +12,17 @@ use Illuminate\Support\Str;
 class MenuController extends Controller
 {
     protected $entity;
+    protected $param;
+    protected $data;
 
     function __construct(Request $request)
     {
         $this->entity = Menu::class;
         $this->param = $request->id;
-
-
         $this->data = [
             'name' => $request->name,
             'slug' => Str::slug($request->name),
         ];
-
     }
 
 }

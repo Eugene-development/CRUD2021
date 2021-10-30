@@ -16,7 +16,6 @@ class TextController extends Controller
     {
         $this->entity = Text::class;
         $this->param = $request->id;
-
     }
 
 }

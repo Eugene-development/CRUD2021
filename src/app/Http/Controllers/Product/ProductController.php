@@ -17,16 +17,16 @@ class ProductController extends Controller
 
     function __construct(Request $request)
     {
-        $this->entity = Product::class;//TODO ???
+        $this->entity = Product::class;
         $this->param = $request->id;
         $this->data = [
             'project_id' => $request->bearerToken(),
             'category_id' => $request->category_id,
             'name' => $request->name,
             'slug' => Str::slug($request->name),
-            'price' => $request->price,
+//            'price' => $request->price,
             'unit' => $request->unit,
-            'description' => $request->description
-        ];
+//            'description' => $request->description
+        ];// TODO size id
     }
 }

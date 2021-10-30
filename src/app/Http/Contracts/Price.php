@@ -4,4 +4,4 @@
 namespace App\Http\Contracts;
 
 
-interface Menu{}
+interface Price{}
