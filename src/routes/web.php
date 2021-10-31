@@ -3,9 +3,11 @@
 use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\Head\HeadController;
 use App\Http\Controllers\Menu\MenuController;
+use App\Http\Controllers\Price\PriceController;
 use App\Http\Controllers\Product\ProductController;
 use App\Http\Controllers\Rubric\RubricController;
 use App\Http\Controllers\Seo\SeoController;
+use App\Http\Controllers\Size\SizeController;
 use App\Http\Controllers\Text\TextController;
 use Illuminate\Support\Facades\Route;
 
@@ -113,6 +115,8 @@ Route::post('/add-head', [HeadController::class, 'add']);
 Route::post('/add-rubric', [RubricController::class, 'add']);
 Route::post('/add-category', [CategoryController::class, 'add']);
 Route::post('/add-product', [ProductController::class, 'add']);
+Route::post('/add-size', [SizeController::class, 'add']);
+Route::post('/add-price', [PriceController::class, 'add']);
 Route::post('/add-seo', [SeoController::class, 'add']);
 Route::post('/add-text', [TextController::class, 'add']);
 
@@ -130,6 +134,8 @@ Route::put('/update-head', [HeadController::class, 'update']);
 Route::put('/update-rubric', [RubricController::class, 'update']);
 Route::put('/update-category', [CategoryController::class, 'update']);
 Route::put('/update-product', [ProductController::class, 'update']);
+Route::put('/update-size', [SizeController::class, 'update']);
+Route::put('/update-price', [PriceController::class, 'update']);
 Route::put('/update-seo', [SeoController::class, 'update']);
 Route::put('/update-text', [TextController::class, 'update']);
 
@@ -147,6 +153,8 @@ Route::delete('/delete-head/{id}', [HeadController::class, 'delete']);
 Route::delete('/delete-rubric/{id}', [RubricController::class, 'delete']);
 Route::delete('/delete-category/{id}', [CategoryController::class, 'delete']);
 Route::delete('/delete-product/{id}', [ProductController::class, 'delete']);
+Route::delete('/delete-size/{id}', [SizeController::class, 'delete']);
+Route::delete('/delete-price/{id}', [SizeController::class, 'delete']);
 Route::delete('/delete-seo/{id}', [SeoController::class, 'delete']);
 Route::delete('/delete-text/{id}', [TextController::class, 'delete']);
 
