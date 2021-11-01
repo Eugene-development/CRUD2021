@@ -24,9 +24,8 @@ class ProductController extends Controller
             'category_id' => $request->category_id,
             'name' => $request->name,
             'slug' => Str::slug($request->name),
-//            'price' => $request->price,
             'unit' => $request->unit,
-//            'description' => $request->description
+            'description' => $request->description
         ];// TODO size id
     }
 }
