@@ -154,7 +154,7 @@ Route::delete('/delete-rubric/{id}', [RubricController::class, 'delete']);
 Route::delete('/delete-category/{id}', [CategoryController::class, 'delete']);
 Route::delete('/delete-product/{id}', [ProductController::class, 'delete']);
 Route::delete('/delete-size/{id}', [SizeController::class, 'delete']);
-Route::delete('/delete-price/{id}', [SizeController::class, 'delete']);
+Route::delete('/delete-price/{id}', [PriceController::class, 'delete']);
 Route::delete('/delete-seo/{id}', [SeoController::class, 'delete']);
 Route::delete('/delete-text/{id}', [TextController::class, 'delete']);
 
