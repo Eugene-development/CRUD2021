@@ -17,9 +17,6 @@ abstract class GetRubric
                 'category' . "." . 'text' => function($query) {
                     $query->where('project_id', $this->token);
                 },
-//                'category' . "." . 'product' => function($query) {
-//                    $query->where('project_id', $this->token);
-//                }, TODO удали
                 'category' . "." . 'product' . "." . 'image' => function($query) {
                     $query->where('project_id', $this->token);
                 },
