@@ -37,3 +37,6 @@ services:
 networks:
   boss-network:
     driver: bridge
+
+
+ # sudo docker run --rm -v $(pwd):/app composer install --ignore-platform-reqs

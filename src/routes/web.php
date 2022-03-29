@@ -11,6 +11,10 @@ use App\Http\Controllers\Size\SizeController;
 use App\Http\Controllers\Text\TextController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/health', function () {
+    return 'Hello World';
+});
+
 
 /*
 |--------------------------------------------------------------------------
