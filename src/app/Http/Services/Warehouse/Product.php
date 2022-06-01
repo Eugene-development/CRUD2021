@@ -15,5 +15,7 @@ trait Product
     {
         $this->model = 'App\Models\Product';
         $this->token = $request->bearerToken();
+
+        //        $this->token = $request->header('X-API-key');
     }
 }
