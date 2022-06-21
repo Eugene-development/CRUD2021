@@ -6,7 +6,6 @@ services:
     build:
       context: .
       dockerfile: ./docker/php/Dockerfile
-#    image: php:7.3-fpm
     container_name: "${COMPOSE_PROJECT_NAME}_PHP"
     restart: unless-stopped
     tty: true
