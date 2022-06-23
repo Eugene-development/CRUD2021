@@ -15,95 +15,95 @@ Route::get('/health', function () {
     return 'Hello World';
 });
 
-
-/*
-|--------------------------------------------------------------------------
-| getOne
-|--------------------------------------------------------------------------
-|
-| Получить одно значение по параметру
-|
-*/
-Route::get('/get-one-menu/{id}', [MenuController::class, 'getOne']);
-Route::get('/get-one-head/{id}', [HeadController::class, 'getOne']);
-Route::get('/get-one-rubric/{id}', [RubricController::class, 'getOne']);
-Route::get('/get-one-category/{id}', [CategoryController::class, 'getOne']);
-Route::get('/get-one-product/{id}', [ProductController::class, 'getOne']);
-Route::get('/get-one-seo/{id}', [SeoController::class, 'getOne']);
-Route::get('/get-one-text/{id}', [TextController::class, 'getOne']);
-
-
-/*
-|--------------------------------------------------------------------------
-| getAll
-|--------------------------------------------------------------------------
-|
-| Получить все значения
-|
-*/
-Route::get('/get-all-menu/', [MenuController::class, 'getAll']);
-Route::get('/get-all-head/', [HeadController::class, 'getAll']);
-Route::get('/get-all-rubric/', [RubricController::class, 'getAll']);
-Route::get('/get-all-category/', [CategoryController::class, 'getAll']);
-Route::get('/get-all-product/', [ProductController::class, 'getAll']);
-Route::get('/get-all-seo/', [SeoController::class, 'getAll']);
-Route::get('/get-all-text/', [TextController::class, 'getAll']);
+Route::middleware(['gzip'])->group(function() {
+    /*
+    |--------------------------------------------------------------------------
+    | getOne
+    |--------------------------------------------------------------------------
+    |
+    | Получить одно значение по параметру
+    |
+    */
+    Route::get('/get-one-menu/{id}', [MenuController::class, 'getOne']);
+    Route::get('/get-one-head/{id}', [HeadController::class, 'getOne']);
+    Route::get('/get-one-rubric/{id}', [RubricController::class, 'getOne']);
+    Route::get('/get-one-category/{id}', [CategoryController::class, 'getOne']);
+    Route::get('/get-one-product/{id}', [ProductController::class, 'getOne']);
+    Route::get('/get-one-seo/{id}', [SeoController::class, 'getOne']);
+    Route::get('/get-one-text/{id}', [TextController::class, 'getOne']);
 
 
-/*
-|--------------------------------------------------------------------------
-| ORM
-|--------------------------------------------------------------------------
-|
-| Menu
-|
-*/
-Route::get('/get-menu/{param}', [MenuController::class, 'getMenu']);
+    /*
+    |--------------------------------------------------------------------------
+    | getAll
+    |--------------------------------------------------------------------------
+    |
+    | Получить все значения
+    |
+    */
+    Route::get('/get-all-menu/', [MenuController::class, 'getAll']);
+    Route::get('/get-all-head/', [HeadController::class, 'getAll']);
+    Route::get('/get-all-rubric/', [RubricController::class, 'getAll']);
+    Route::get('/get-all-category/', [CategoryController::class, 'getAll']);
+    Route::get('/get-all-product/', [ProductController::class, 'getAll']);
+    Route::get('/get-all-seo/', [SeoController::class, 'getAll']);
+    Route::get('/get-all-text/', [TextController::class, 'getAll']);
 
 
-/*
-|--------------------------------------------------------------------------
-| ORM
-|--------------------------------------------------------------------------
-|
-| Head->Rubric
-|
-*/
-Route::get('/get-head/{param}', [HeadController::class, 'getHead']);
+    /*
+    |--------------------------------------------------------------------------
+    | ORM
+    |--------------------------------------------------------------------------
+    |
+    | Menu
+    |
+    */
+    Route::get('/get-menu/{param}', [MenuController::class, 'getMenu']);
 
 
-/*
-|--------------------------------------------------------------------------
-| ORM
-|--------------------------------------------------------------------------
-|
-| Rubric
-|
-*/
-Route::get('/get-rubric/{param}', [RubricController::class, 'getRubric']);
+    /*
+    |--------------------------------------------------------------------------
+    | ORM
+    |--------------------------------------------------------------------------
+    |
+    | Head->Rubric
+    |
+    */
+    Route::get('/get-head/{param}', [HeadController::class, 'getHead']);
 
 
-/*
-|--------------------------------------------------------------------------
-| ORM
-|--------------------------------------------------------------------------
-|
-| Category
-|
-*/
-Route::get('/get-category/{param}', [CategoryController::class, 'getCategory']);
+    /*
+    |--------------------------------------------------------------------------
+    | ORM
+    |--------------------------------------------------------------------------
+    |
+    | Rubric
+    |
+    */
+    Route::get('/get-rubric/{param}', [RubricController::class, 'getRubric']);
 
 
-/*
-|--------------------------------------------------------------------------
-| ORM
-|--------------------------------------------------------------------------
-|
-| Product
-|
-*/
-Route::get('/get-product/{param}', [ProductController::class, 'getProduct']);
+    /*
+    |--------------------------------------------------------------------------
+    | ORM
+    |--------------------------------------------------------------------------
+    |
+    | Category
+    |
+    */
+    Route::get('/get-category/{param}', [CategoryController::class, 'getCategory']);
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | ORM
+    |--------------------------------------------------------------------------
+    |
+    | Product
+    |
+    */
+    Route::get('/get-product/{param}', [ProductController::class, 'getProduct']);
+});
 
 
 /*
